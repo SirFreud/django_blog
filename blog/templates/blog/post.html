@@ -3,5 +3,6 @@
 {% block content %}
     <h3>{{ post.title }}</h3>
     <h5>on {{ post.date }}</h5>
+    {# Only mark something as 'safe' if it's coming directly from the admin #}
     <p>{{ post.body|safe|linebreaks }}</p>
 {% endblock content %}
